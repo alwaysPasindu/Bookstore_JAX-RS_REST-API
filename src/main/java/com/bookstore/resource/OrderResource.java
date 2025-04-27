@@ -5,16 +5,16 @@ import com.bookstore.model.Book;
 import com.bookstore.model.Cart;
 import com.bookstore.model.Order;
 import com.bookstore.util.DataStore;
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/customers/{customerId}/orders")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class OrderResource {
-    private DataStore dataStore = DataStore.getInstance();
+    private final DataStore dataStore = DataStore.getInstance();
 
     @POST
     public Response createOrder(@PathParam("customerId") int customerId) {

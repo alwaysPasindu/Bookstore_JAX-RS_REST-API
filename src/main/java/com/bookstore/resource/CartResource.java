@@ -4,9 +4,9 @@ import com.bookstore.exception.*;
 import com.bookstore.model.Book;
 import com.bookstore.model.Cart;
 import com.bookstore.util.DataStore;
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.Map;
 
 @Path("/customers/{customerId}/cart")

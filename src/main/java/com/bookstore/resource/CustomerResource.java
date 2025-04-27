@@ -3,16 +3,16 @@ package com.bookstore.resource;
 import com.bookstore.exception.*;
 import com.bookstore.model.Customer;
 import com.bookstore.util.DataStore;
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/customers")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class CustomerResource {
-    public  DataStore dataStore = DataStore.getInstance();
+    private final DataStore dataStore = DataStore.getInstance();
 
     @POST
     public Response createCustomer(Customer customer) {
