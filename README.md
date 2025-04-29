@@ -101,5 +101,4 @@ The video shows Postman requests, HTTP methods, status codes, and error handling
 
 ## 📄 License
 
-📚 For **academic purposes only**, not for commercial use.
-```
+This project is licensed under the MIT License.
